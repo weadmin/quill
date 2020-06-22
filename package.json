@@ -1,5 +1,5 @@
 {
-  "name": "wecomponent-quill",
+  "name": "@tencent/wecomponent-quill",
   "version": "2.0.1",
   "description": "Your powerful, rich text editor",
   "author": "Jason Chen <jhchen7@gmail.com>",
