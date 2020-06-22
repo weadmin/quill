@@ -18,10 +18,17 @@ class Link extends Inline {
   }
 
   format(name, value) {
+    const ATTRIBUTES = ['data-alert', 'style'];
+
     if (name !== this.statics.blotName || !value) {
       super.format(name, value);
     } else {
       this.domNode.setAttribute('href', this.constructor.sanitize(value));
+      if (ATTRIBUTES.indexOf(name) > -1) {
+        if (value) {
+          this.domNode.setAttribute(name, value);
+        }
+      }
     }
   }
 }
